@@ -1,0 +1,87 @@
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.services {
+    max-width: 1200px;
+    padding: 0px 0px 10px 0px;
+}
+
+.service {
+    border: 3px solid gray;
+    border-radius: 15px;
+    max-width: 300px;
+    height: auto;
+    display: inline-block;
+    margin: 20px;
+    padding: 0.2rem 0.2rem;
+    background-color:wheat
+}
+
+.service:hover {
+    background-color: oldlace;
+    border: 3px solid gold;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.service:hover .image-service { 
+    border-color: gold;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    transform: scale(1.05);
+
+}
+
+.description {
+    text-align: left;
+    font-size: 17px;
+    line-height: 1.5;
+    color: #333;
+    list-style-type: square;
+}
+
+.image-content {
+    width: 120px; /* Fixed width to align images */
+    display:inline-table;
+    justify-content: center;
+}
+
+.image-service{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid #ffaa00;
+    margin: -40px auto 20px; /* Centering the image on top */
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-service img {
+    width: 70%;
+    height: 70%;
+    object-fit: cover;
+}
+
+.tools-container {
+    display: flex;
+    align-items: center;
+    font-weight: bold; 
+
+}
+
+.image-tool {
+    display: inline-flex;
+    align-items: center;
+}
+
+.image-tool img {
+    display: block;  /* Ensures no space between images */
+    width: auto; 
+    height: 50px;
+    margin-left: 5px;
+    margin-top: 10px;
+}
+

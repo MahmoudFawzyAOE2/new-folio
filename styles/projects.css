@@ -1,0 +1,64 @@
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.projects {
+    padding: 0px 0px 10px 0px;
+}
+
+.project {
+    border: 3px solid gray;
+    border-radius: 15px;
+    max-width: 300px;
+    height: auto;
+    display: inline-block;
+    margin: 0px 10px 20px 10px ;
+    padding: 0.2rem 0.2rem;
+    background-color:wheat
+}
+
+.project:hover {
+    background-color: oldlace;
+    border: 3px solid gold;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.project:hover .image-project {
+    transform: scale(1.05);
+}
+
+.description {
+    text-align: left;
+    font-size: 17px;
+    line-height: 1.5;
+    color: #333;
+    list-style-type: square;
+}
+
+.image-content {
+    width: 120px; /* Fixed width to align images */
+    display:inline-table;
+    justify-content: center;
+}
+
+.image-project img {
+    max-width: 170px; /* Ensure the image fits within the container */
+    height: auto;
+}
+
+.image-github img {
+    width: 150px; /* Ensure the image fits within the container */
+    height: auto;
+    margin-top: 10px;
+}
+
+@keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }

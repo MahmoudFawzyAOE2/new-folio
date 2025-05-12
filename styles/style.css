@@ -1,0 +1,187 @@
+html{
+    user-select: none;
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    margin: 0;
+    color: #333;
+    background: 
+    linear-gradient(
+        90deg,
+        #c9c675 00%,
+        #f3f2b8 10%,
+        #f3f2b8 90%,
+        #c9c675 100% 
+      );
+}
+
+main:after {
+    display: block;
+    height: 100px;
+}
+
+header {
+    background-color: rgba(255, 215, 0, 0.6); /* gold with partial transparency */
+    
+    text-align: center;
+    position: sticky;
+    width: 100%;
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: center;
+}
+
+nav ul {
+    padding: 0;   
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 10px;
+}
+
+nav ul li a {
+    user-select: none;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: large;
+    transition-duration: 0.2s;
+}
+
+nav ul li a:hover {
+    color:white;
+    text-shadow: 0 0 40px black;
+}
+
+.nav-container ul li.active a {
+    color:#007bff; /* Different color for active link */
+    font-weight: bold; /* Bold text for active link */
+    border-bottom: 2px solid #007bff; /* Add bottom border to active link */
+    border-top: 2px solid #007bff; 
+}
+
+h2 {
+    align-self: center;
+}
+
+.page-title {
+    width: 50%; 
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center; /* optional, if you also want the text centered */
+}
+
+section {
+    text-align: center;
+}
+
+.btn {
+    padding: 0.8rem 1rem;
+    background:gold;
+    color: black;
+    border-radius: 5px;
+    transition-duration: 0.2s;    
+    text-decoration: none;
+    font-weight: bold;
+    font-size: large;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 1rem;
+    align-self: center; /* Centers the button */
+}
+
+.btn:hover {
+    color: rgb(211, 152, 3);
+    border-color: gold;
+    background-color:whitesmoke;
+    font-weight: bold;
+    box-shadow: 0 0 30px gold;
+}
+
+.logos {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    background: rgb(236, 182, 44);
+    margin: 30px 0px 40px 0px;
+}
+  
+  /* The 'slide' container holds twice the content for seamless scrolling */
+.slide {
+    display: inline-block;
+    white-space: nowrap;
+    animation: marquee 25s linear infinite;
+}
+  
+.logos:hover .slide{
+    animation-play-state: paused;
+}
+
+
+.logos:before,
+.logos:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    z-index: 2;
+}
+
+.logos:before {
+    left: 0;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.15));
+}
+
+.logos:after {
+    right: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.15));
+}
+
+.slide span {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    padding: 20px;
+  }
+  
+  .slide img {
+    max-width: 60px;
+    padding: 10px 20px 10px 20px;
+    height: auto;
+}
+
+.slide img:hover {
+    transform: scale(1.1);
+}
+
+  /* Marquee keyframes: slides from 0% to -50% of its width */
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+footer {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding: 0.1px;   
+    background: gold;
+    color: black;
+    text-align: center;
+}

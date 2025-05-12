@@ -1,0 +1,181 @@
+.hero {
+    margin: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;  /* Center vertically */
+    text-align: center;
+    flex-direction: column; /* Stack content vertically on smaller screens */
+    margin-bottom: 2rem;
+}
+
+.image-content {
+    max-width: 370px; /* Slightly adjusted to match image max-width */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image {
+    width: 170px;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 9%;
+    margin-right: 10rem;
+    margin-left: 10rem;
+    animation: spin 5s infinite linear;
+    border: 6px solid transparent;
+    background: 
+    conic-gradient(
+        from var(--bg-angle) in oklch longer,
+        #FFD700 0%,
+        #000000 25%,
+        #FFD700 50%,
+        #000000 75%,
+        #FFD700 100%  )
+    border-box; /* extends to outer border edges */
+}
+
+@property --bg-angle {
+    inherits: false;
+    initial-value: 0deg;
+    syntax: "<angle>";
+}
+
+@keyframes spin {
+    to {
+      --bg-angle: 360deg;
+    }
+}
+
+.text-content{
+    max-width: 300px;
+}
+
+.welcome_text {
+    font-family: 'Inter', sans-serif;  /* A modern, clean font */
+    font-size: 14px;
+    color: #333333;  /* Dark gray for good contrast on yellow */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.name_text {
+    font-family: 'Space Grotesk', sans-serif;  /* Similar to the bold font in image */
+    font-size: 40px;
+    font-weight: 700;
+    color: #1a1a1a;  /* Nearly black for strong contrast */
+    margin: 0;
+    line-height: 1.2;
+}
+
+.job_text {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    color: darkgoldenrod;  
+}
+.outer-quot {
+    position: relative;
+    max-width: 370px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 5px;
+    padding-top: 35px;
+}
+
+.phrase {
+    position: relative;
+    border: 2px solid gray;
+    border-radius: 20px;
+    background-color: wheat;
+    padding: 20px 27px;
+    margin-bottom: 70px;
+}
+
+.phrase_text {
+    font-style: italic;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 25px;
+    font-weight: bolder;
+    color: black;  
+    text-align: center;
+    margin: 0;
+    line-height: 1.5;
+    letter-spacing: 0.2px; 
+}
+
+.top-q, .bottom-q {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+}
+
+.top-q {
+    top: -20px;
+    right: 300px;
+}
+
+.bottom-q {
+    bottom: -60px;
+    left: 300px;
+}
+
+.text-q {
+    font-style: italic;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 80px;
+    color: black;  
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    letter-spacing: 0.2px; 
+}
+
+.profile-item {
+    display: flex;
+    flex-direction: column; /* Change to column for small screens */
+    align-items: center;
+    align-self: center;
+}
+
+
+
+
+/* Media query for larger screens */
+@media screen and (min-width: 800px) {
+    .hero-image {
+            width: 250px;
+            margin-bottom: 2rem;
+    }
+    
+    .hero {
+        flex-direction: row;  /* Display hero content horizontally on larger screens */
+        justify-content: center; /* Keep content centered horizontally */
+        align-items: center; /* Keep content centered vertically */
+    }
+
+    .profile-item {
+        max-width: 900px;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .text-content {
+        max-width:fit-content;
+        text-align: left;
+    }
+
+    .outer-quot {
+        max-width:fit-content;
+    }
+    .top-q {
+        top: -20px;
+        right: 700px;
+    }
+    
+    .bottom-q {
+        bottom: -63px;
+        left: 690px;
+    }
+}
